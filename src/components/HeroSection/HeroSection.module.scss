@@ -1,0 +1,122 @@
+.block{
+	display: flex;
+	justify-content: center;
+	padding: 8em;
+	max-width: 1960px;
+	margin: 0 auto;
+}
+.block .image{
+	width: calc((100% - 176px)/3);
+	height: 100%;
+}
+.mainContent{
+	display: flex;
+	width: calc((100% - 176px)/3);
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background-color: #F4F4F4;
+	margin: 0 0.8rem;
+	padding: auto 0;
+	font-family: 'DM Sans', sans-serif;
+	color: #262626;
+}
+.textSale{
+	font-weight: 700;
+	margin-bottom: 1.6rem;
+}
+.title{
+	font-weight: 700;
+	font-size: 5.5rem;
+}
+.subtitle{
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 150%;
+	color: #747474;
+	margin-bottom: 1.6em;
+}
+.link{
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+.mainImage{
+	width: 45%;
+	margin: 4.1rem 0;
+}
+
+@media screen and (max-width: 1825px) {
+	.title{
+		font-size: 3.5rem;
+	}
+	.subtitle {
+		font-size: 1.5rem;
+	}
+	.mainImage{
+		margin: 2.5rem 0;
+	}
+	.link{
+		font-size: 1.1rem;
+	}
+}
+	
+@media screen and (max-width: 1350px) {
+	.title {
+		font-size: 3rem;
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+	}
+
+	.mainImage {
+		margin: 1.5rem 0;
+	}
+
+	.link {
+		font-size: 0.8rem;
+	}
+	.textSale{
+		font-size: 0.7rem;
+	}
+	.block {
+		padding: 4em;
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.title {
+		font-size: 2.5rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.mainImage {
+		margin: 1.2rem 0;
+	}
+	.block {
+		padding: 2em;
+	}
+}
+
+@media screen and (max-width: 801px) {
+	.block {
+		display: block;
+	}
+	.block .image {
+		width: 100%;
+	}
+	.mainContent {
+		width: 100%;
+		margin: 1rem 0;
+		padding: 1rem;
+		box-sizing: border-box;
+	}
+	.mainImage {
+		width: 30%;
+		margin: 4.1rem 0;
+	}
+}
