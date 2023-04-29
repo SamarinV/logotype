@@ -81,17 +81,6 @@ ul li {
 	.header{
 		margin-bottom: 1rem;
 	}
-	.toggler {
-		display: block;
-		z-index: 4;
-		height: 50px;
-		width: 50px;
-		position: absolute;
-		top: 18px;
-		right: 5px;
-		cursor: pointer;
-		opacity: 0;
-	}
 
 	.hamburger {
 		position: absolute;
@@ -103,6 +92,7 @@ ul li {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 	}
 
 	.hamburger>div {
@@ -131,24 +121,24 @@ ul li {
 		top: 10px;
 	}
 
-	.toggler:checked+.hamburger>div {
+	.hamburgerActive>div {
 		background: rgba(0, 0, 0, 0);
 	}
 
-	.toggler:checked+.hamburger>div::before {
+	.hamburgerActive>div::before {
 		top: 0;
 		transform: rotate(45deg);
 		background: black;
 	}
 
 
-	.toggler:checked+.hamburger>div::after {
+	.hamburgerActive>div::after {
 		top: 0;
 		transform: rotate(135deg);
 		background: black;
 	}
 
-	.toggler:checked~.menu>div>ul {
+	.hamburgerActive~.menu>div>ul {
 		transition: visibility 0.4s ease;
 		transition-delay: 0.1s;
 		visibility: visible;

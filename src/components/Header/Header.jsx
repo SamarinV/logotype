@@ -5,9 +5,9 @@ import searchIcon from "../../images/searchIcon.svg";
 import Dropdown from "../Dropdown/Dropdown";
 
 export default function Header() {
-  const [burgerActive, setBurgerActive] = useState(false);
+  const [menuActive, setmenuActive] = useState(false);
   const handleMenu = () => {
-    setBurgerActive(!burgerActive);
+    setmenuActive(!menuActive);
   };
 
   const [myScroll, setMyScroll] = React.useState(0);
@@ -40,15 +40,15 @@ export default function Header() {
         <img className={styles.logo} src={logo} alt="Логотип"></img>
         <img className={styles.searchIcon} src={searchIcon} alt="Поиск"></img>
       </div>
-      <nav className={`${styles.menu} ${burgerActive ? styles.active : ""}`}>
+      <nav className={`${styles.menu} ${menuActive ? styles.active : ""}`}>
         <div>
           <img className={styles.menuLogo} src={logo} alt="Логотип"></img>
-          <input
+          <div
             onClick={handleMenu}
-            type="checkbox"
-            className={styles.toggler}
-          />
-          <div className={styles.hamburger}>
+            className={`${styles.hamburger}  ${
+              menuActive ? styles.hamburgerActive : ""
+            }`}
+          >
             <div></div>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function Header() {
       <div
         onClick={handleMenu}
         className={`${styles.overlay} ${
-          burgerActive ? styles.overlayActive : ""
+          menuActive ? styles.overlayActive : ""
         }`}
       ></div>
     </header>
